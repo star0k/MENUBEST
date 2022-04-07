@@ -10,7 +10,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import exc
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from flask_wtf.file import FileField
-import os 
+
 
 
 UPLOAD_FOLDER = '/home/star0k/mysite/static/images'
