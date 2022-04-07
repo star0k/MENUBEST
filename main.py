@@ -10,6 +10,8 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import exc
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from flask_wtf.file import FileField
+import os 
+
 
 UPLOAD_FOLDER = '/home/star0k/mysite/static/images'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
@@ -20,9 +22,12 @@ ADMIN_USERNAME = 'pbkdf2:sha256:260000$9tKJdfyn$8fe82568745de2f164e3828a05307bf3
 ADMIN_PASSWORD = 'pbkdf2:sha256:260000$lfrWAGkJ$5e5cd9ac32372e73e2ef7f9c725ca704dacd568ff5720d2273e9aa3ec9c99c3d'
 
 app = Flask(__name__)
+database = os.environ.get('DATABASE_URL')
 
+
+app.config['SQLALCHEMY_DATABASE_URI'] = database
 db = SQLAlchemy(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'https://github.com/star0k/MENUBEST/blob/main/Menue.db'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = "gonna be awessom"
 login_manager = LoginManager()
