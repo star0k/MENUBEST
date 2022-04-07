@@ -28,8 +28,8 @@
       <div class="row">
           {% for res in resturants%}
         <div class="col col-4">
-          <div class="card" style="width: 18rem; background-color:rgb(241, 241, 241);;">
-            <img src="../static/images/{{res.Image}}" class="card-img-top" alt="Resturant Image" />
+          <div class="card" style="width: 18rem; background-color:rgb(241, 241, 241); margin :2%;">
+            <img src="https://www.pythonanywhere.com/user/star0k/files/home/star0k/mysite/static/images/{{res.Image}}" class="card-img-top" alt="Resturant Image" />
             <div class="card-body" style="text-align:center;">
               <h3 class="card-text">
                 {{res.Name}}
@@ -37,8 +37,13 @@
                <h5 class="card-text">
                 opens from {{res.Open_Time}} to   {{res.Close_Time}}
               </h5>
+               <a href="/resturants/{{res.Rid}}/edit">
+                <button type="button" class="btn btn-primary" style="margin :3%">Edit Restaurant</button>
+
+                </a>
+
               <a href="/resturants/{{res.Rid}}/delete/del">
-                <button class="btn btn-danger">
+                <button style="margin:3%" class="btn btn-danger">
                   Delete Restaurant
                 </button>
                 </a>
@@ -47,7 +52,7 @@
         </div>
         {%endfor%}
   </div>
-          
+
       </div>
     </div>
   </body>
