@@ -22,7 +22,7 @@ ADMIN_PASSWORD = 'pbkdf2:sha256:260000$lfrWAGkJ$5e5cd9ac32372e73e2ef7f9c725ca704
 app = Flask(__name__)
 
 db = SQLAlchemy(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Menue.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'https://github.com/star0k/MENUBEST/blob/main/Menue.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = "gonna be awessom"
 login_manager = LoginManager()
