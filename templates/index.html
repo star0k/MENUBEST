@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Login</title>
+  <style>
+      #success_message{ display: none;}
+  </style>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      <div class="container">
+
+    <form class="well form-horizontal" method="POST" action="/resturants/{{resid}}/edit">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Edit {{oldvalue['Name']}} </legend>
+ <div class="form-group col-6" style="text-align : left; ">
+
+ {%for option in options%}
+        <h4>
+          <label class="col-md-3 control-label" style="margin:0% ; text-align : left;" for="{{option}}">{{options_names[option]}}</label>
+        </h4>
+        <div class="col-md-3 inputGroupContainer">
+  <div class="input-group" style="margin:0%">
+  <!--<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
+        <input class="form-control"  type="text" name="{{option}}" placeholder="{{oldvalue[option]}}" />
+        <label class="" style="opacity : 0;" >/</label>
+        </div>
+         </div>
+        {%endfor%}
+        </div>
+
+<!-- Text input-->
+
+
+
+<!-- Success message -->
+
+<!-- Button -->
+<div class="form-group" style="text-align : left;">
+  <div class="col-md-6">
+    <a href="/control-panel">
+    <div class="btn btn-primary" >back </div>
+    </a>
+  </div>
+  <div class="col-md-6">
+    <button type="submit" class="btn btn-warning btn-group-lg" >Save All </button>
+  </div>
+
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+
+
+
+
+
+    </div>
+  </body>
+</html>

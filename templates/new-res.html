@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add New Restaurant</h1>
+      <form
+        method="POST"
+        enctype="multipart/form-data"
+        action="{{ url_for('addres') }}"
+      >
+        {{ form.csrf_token }}
+        <h3>
+          {{ form.Name.label }}
+          <br />
+          {{ form.Name(size=30) }}
+        </h3>
+        <h3>
+          {{form.Rid.label }}
+          <br />
+          {{ form.Rid(size=30) }}
+        </h3>
+        <h3>
+          {{form.Image.label }}
+          <br />
+          {{ form.Image(size=30) }}
+        </h3>
+        <h3>
+          {{form.Location.label }}
+          <br />
+          {{ form.Location(size=30) }}
+        </h3>
+        <h3>
+          {{form.Phone.label }}
+          <br />
+          {{ form.Phone(size=30) }}
+        </h3>
+        <h3>
+          {{form.Open_Time.label }}
+          <br />
+          {{ form.Open_Time(size=30) }}
+        </h3>
+        <h3>
+          {{form.Close_Time.label }}
+          <br />
+          {{ form.Close_Time(size=30) }}
+        </h3>
+        <h3>
+          {{form.Week_Time.label }}
+          <br />
+          {{ form.Week_Time(size=30) }}
+        </h3>
+        <h3>
+          {{form.Recommended.label }}
+          <br />
+          {{ form.Recommended(size=30) }}
+        </h3>
+        {{form.Submit}}
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add New Restaurant</h1>
+      <form method="POST" action="{{ url_for('edres') }}">
+        <h3>
+          <label for="name">Resturant Name</label>
+        </h3>
+        <input type="text" name="name" />
+        <input type="submit" />
+      </form>
+    </div>
+  </body>
+</html>
