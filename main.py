@@ -109,7 +109,7 @@ class Users(UserMixin, db.Model):
 
     def __repr__(self):
         return '<id %r>' % self.id
-# db.create_all()
+db.create_all()
 # admin = Users (Email = ADMIN_USERNAME , Password = ADMIN_PASSWORD) 
 # db.session.add(admin)
 # db.session.commit()
